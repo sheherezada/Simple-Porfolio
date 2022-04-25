@@ -1,0 +1,9 @@
+.constuction {
+  width: 100%;
+  height: 100vh;
+  background-color: red;
+  background-image: url(../img/underc.jpg);
+  background-size: cover;
+  overflow: hidden;
+}
+/*# sourceMappingURL=price.css.map */

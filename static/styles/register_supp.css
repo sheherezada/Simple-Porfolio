@@ -1,0 +1,10 @@
+input {
+    margin: 10px !important;
+    width: 70%;
+    border-color: black !important;
+
+}
+
+label {
+    width: 20% !important;
+}

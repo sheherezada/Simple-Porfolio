@@ -1,0 +1,30 @@
+.image {
+
+    margin-top: 2rem !important;
+}
+
+.name {
+    font-size: 2.5rem !important;
+}
+
+.name span {
+    font-size: 3.5rem !important;
+}
+
+.btn-wrapper {
+    padding-left: 80px;
+    margin-top: 50px;
+}
+
+.logged_btn {
+    display: flex;
+    padding: 1rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .1);
+    border-radius: 10px;
+    background-color: rgb(230, 229, 229);
+    margin-right: 20px;
+}
+
+.logged_btn:hover {
+    color: black;
+}

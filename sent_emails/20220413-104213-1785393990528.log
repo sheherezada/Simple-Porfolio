@@ -1,0 +1,25 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: Password reset on 127.0.0.1:8000
+From: webmaster@localhost
+To: hristina.shopping@gmail.com
+Date: Wed, 13 Apr 2022 08:42:13 -0000
+Message-ID: <164983933310.25212.1891556959448845803@DESKTOR-SHEHEREZADA>
+
+
+You're receiving this email because you requested a password reset for your user account at 127.0.0.1:8000.
+
+Please go to the following page and choose a new password:
+
+http://127.0.0.1:8000/accounts2/reset/MQ/b3tf2d-78582f3ad63c1523e137e1d82239a4ae/
+
+Your username, in case you’ve forgotten: krasi8
+
+Thanks for using our site!
+
+The 127.0.0.1:8000 team
+
+
+
+-------------------------------------------------------------------------------

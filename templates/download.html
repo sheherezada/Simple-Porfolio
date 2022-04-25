@@ -1,0 +1,58 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block main_content %}
+
+    <link rel="stylesheet" href="{%  static 'styles/download_supp.css' %}">
+    <body class="main-content">
+
+    <header class="section sec1 header active" id="home">
+        <!-- Common navigation -->
+        <div class="main-header">
+            <div class="logo">K.Hristov</div>
+            <input type="checkbox" class="menu-btn" id="menu-btn">
+            <label for="menu-btn" class="menu-icon">
+                <span class="menu-icon_line"></span>
+            </label>
+            <ul class="nav-links">
+                <li class="nav-link"><a href={% url 'show index' %}>Home</a></li>
+                <li class="nav-link"><a href={% url 'about me' %}>About</a></li>
+                <li class="nav-link"><a href="{% url 'portfolio' %}">Portfolio</a></li>
+                <li class="nav-link"><a href="{% url 'price' %}">Price</a></li>
+                <li class="nav-link"><a href="{% url 'quotes' %}">Quote</a></li>
+                <li class="nav-link"><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+            <ul class="secondary">
+                <li class="secondary-link"><a href="">Careers</a></li>
+                <li class="secondary-link"><a href="{% url 'logout' %}">Logout</a></li>
+            </ul>
+        </div>
+
+        <!-- End of common navigation -->
+        <div class="header-content">
+            <div class="left-header">
+                <div class="h-shape"></div>
+                <div class="image">
+                    <img src="{% static 'img/design5.png' %}" alt="">
+                </div>
+            </div>
+            <div class="right-header">
+                <h1 class="name">
+                    {% if user.is_authenticated %}
+                        Thank you <span>{{ user.username }}!</span>
+                    {% else %}
+                        Thank you for downloading!
+                    {% endif %}
+                </h1>
+
+                {% for i in context %}
+                    <div class="btn-wrapper">
+                        DOWNLOAD FROM HERE : <a class="cv" href=" {{ i.upload.url }}">CV</a>
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </header>
+
+
+{% endblock %}

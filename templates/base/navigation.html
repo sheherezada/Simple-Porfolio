@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K.Hristov</title>
+    <link rel="stylesheet" href="{% static 'styles/price.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/nav.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Babylonica&family=Beau+Rivage&family=Lavishly+Yours&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<style>
+
+</style>
+<body class="main-content">
+
+
+    <header class="" id="home">
+        <div class="main-header">
+            <div class="logo">K.Hristov</div>
+
+            <input type="checkbox" class="menu-btn" id="menu-btn">
+            <label for="menu-btn" class="menu-icon">
+                <span class="menu-icon_line"></span>
+            </label>
+            <ul class="nav-links">
+                <li class="nav-link"><a href="{%  url 'show index' %}">Home</a></li>
+                <li class="nav-link"><a href="{%  url 'about me' %}">About</a></li>
+                <li class="nav-link"><a href="{%  url 'portfolio' %}">Portfolio</a></li>
+                {%  if user.is_authenticated  %}
+                <li class="nav-link"><a href="{% url 'price'%}">Price</a></li>
+                <li class="nav-link"><a href="{% url 'quotes' %}">Quote</a></li>
+                {%  else %}
+                <li class="nav-link"><a href="{% url 'login user'%}">Price</a></li>
+                <li class="nav-link"><a href="{% url 'login user' %}">Quote</a></li>
+                {% endif %}
+                <li class="nav-link"><a href="{%  url 'contact' %}">Contact</a></li>
+
+            </ul>
+             <ul class="secondary">
+                <li class="secondary-link"><a href="{% url 'careers' %}">Carreers</a> </li>
+
+                {% if user.is_authenticated %}
+                <li class="secondary-link"><a href="{%  url 'logout' %}">Logout</a></li>
+                    {% else %}
+                    <li class="secondary-link"><a href="{%  url 'login user' %}">Login</a></li>
+                {%  endif %}
+            </ul>
+        </div>
+    </header>
+
+{% block main_mnavigation %}
+{% endblock %}
+
+
+
+    <script src="{% static 'js/app.js' %}"></script>
+    <script src="{% static 'js/nav.js' %}"></script>
+</body>
+</html>

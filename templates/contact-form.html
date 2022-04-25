@@ -1,0 +1,103 @@
+{% extends 'base/navigation.html' %}
+{% load static %}
+{% block main_mnavigation %}
+    <link rel="stylesheet" href="{%  static 'styles/contact_supp.css' %}">
+
+    <main>
+
+        <section class="section sec5 contact active" id="contact">
+            <div class="contact-container">
+                <div class="main-title">
+                    <h2>Contact <span>Me</span><span class="bg-text">Contact</span></h2>
+                </div>
+                <div class="contact-content-con">
+                    <div class="left-contact">
+                        <h4><span class="logo-contact">K.Hristov</span><br><span>Architecture bureau</span><br></h4>
+                        <p>
+                            <span class="contact-detail">Precision</span>
+                            <span class="contact-detail">Professionalism</span>
+                            <span class="contact-detail">Perfection</span>
+                        </p>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <div class="icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Location:</span>
+                                </div>
+                                <p>
+                                    Nurnberg, Germany
+                                </p>
+                            </div>
+                            <div class="contact-item">
+                                <div class="icon">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Email:</span>
+                                </div>
+                                <p>
+                                    <span>archhristov1984@gmail.com</span>
+                                </p>
+                            </div>
+                            <div class="contact-item">
+                                <div class="icon">
+                                    <i class="fas fa-user-graduate"></i>
+                                    <span>Availability:</span>
+                                </div>
+                                <p>
+                                    <span>Germany, Luxembourg</span>
+                                </p>
+                            </div>
+                            <div class="contact-item">
+                                <div class="icon">
+                                    <i class="fas fa-user-graduate"></i>
+                                    <span>Mobile Number:</span>
+                                </div>
+                                <p>
+                                    <span>+491735194976</span>
+                                </p>
+                            </div>
+                            <div class="contact-item">
+                                <div class="icon">
+                                    <i class="fas fa-globe-africa"></i>
+                                    <span>Languages:</span>
+                                </div>
+                                <p>
+                                    <span>German, English, Russian</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="contact-icons">
+
+                        </div>
+                    </div>
+                    <div class="right-contact">
+                        <form method="POST" class="contact-form">
+                             <div class="input-control i-c-2">
+                                 {{ form.first_name }}
+                                 {{ form.last_name }}
+                            </div>
+                             <div class="input-control">
+                                {{ form.phone_number }}
+                            </div>
+                            <div class="input-control">
+                                {{ form.email }}
+                            </div>
+                            <div class="input-control">
+                                {{ form.subject }}
+                            </div>
+                            <div class="input-control">
+                                {{ form.content }}
+                            </div>
+                            {% csrf_token %}
+                            <div class="submit-btn">
+                                <button class="btn-quotes ">SAVE</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+{% endblock %}

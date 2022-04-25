@@ -1,0 +1,4 @@
+.idea
+venv/
+accounts/migrations/
+web/migrations/

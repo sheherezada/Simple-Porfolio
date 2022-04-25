@@ -1,0 +1,46 @@
+{% extends 'base/navigation.html' %}
+{% load static %}
+{% block main_mnavigation %}
+    <main>
+
+        <section class="section sec3 active" id="portfolio">
+
+
+            <div class="main-title">
+                <h2>My <span>Portfolio</span><span class="bg-text">My Work</span></h2>
+            </div>
+            <p class="port-text">
+                <span class="logo port-text-logo">K. Hristov</span><br>
+                <span>Projects</span>
+            </p>
+            <div class="portfolios">
+
+                {% for item in items %}
+                    <div class="portfolio-item">
+
+                        <div class="image">
+                            <img src="{{ item.image.url }}" alt="">
+
+                        </div>
+                        <div class="hover-items">
+
+                            <h3>{{ item.name }}</h3>
+                            <div class="icons">
+
+                                <a href="{% url 'about me' %}" class="icon">
+                                    <i class="fas fa-user"></i>
+                                </a>
+
+                            </div>
+                        </div>
+
+                    </div>
+                {% endfor %}
+
+            </div>
+        </section>
+
+    </main>
+
+
+{% endblock %}

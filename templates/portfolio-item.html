@@ -1,0 +1,84 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block main_content %}
+<body class="main-content">
+<link rel="stylesheet" href="{%  static 'styles/portfolio_i_supp.css' %}">
+    <header class="section sec1 header active" id="home">
+        <!-- Common navigation -->
+        <div class="main-header">
+            <div class="logo">K.Hristov</div>
+
+
+            <input type="checkbox" class="menu-btn" id="menu-btn">
+            <label for="menu-btn" class="menu-icon">
+                <span class="menu-icon_line"></span>
+            </label>
+
+            <ul class="nav-links">
+                <li class="nav-link"><a href={% url 'show index' %}>Home</a></li>
+                <li class="nav-link"><a href={% url 'about me' %}>About</a></li>
+                <li class="nav-link"><a href="{% url 'portfolio' %}">Portfolio</a></li>
+                <li class="nav-link"><a href="{% url 'price' %}">Price</a></li>
+                <li class="nav-link"><a href="{% url 'quotes' %}">Quote</a></li>
+                <li class="nav-link"><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+            <ul class="secondary">
+                <li class="secondary-link"><a href="">Careers</a> </li>
+                <li class="secondary-link"><a href="{%  url 'logout' %}">Logout</a></li>
+            </ul>
+        </div>
+
+        <!-- End of common navigation -->
+        <div class="header-content">
+            <div class="left-header">
+                <div class="h-shape"></div>
+                <div class="image">
+                    <img src="{% static 'img/design2.png' %}" alt="">
+                </div>
+            </div>
+            <div class="right-header">
+
+                <div class="name">
+                    <h5>TYPE</h5>
+                </div>
+                <div class="portfolio-img">
+                    <img src="{% static 'img/design1.jpg' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+
+        <style>
+            .btn-wrapper {
+                /* background-color: red; */
+                padding-left: 80px;
+                margin-top: 50px;
+            }
+
+            .logged_btn {
+                display: flex;
+                /* border: 1px solid var(--color-grey-5); */
+                padding: 1rem;
+                box-shadow: 5px 5px 5px rgba(0, 0, 0, .1);
+                /* border-color: var(--color-grey-3); */
+                border-radius: 10px;
+                background-color: rgb(230, 229, 229);
+                margin-right: 20px;
+            }
+
+            .logged_btn:hover {
+                color: black;
+            }
+
+            .portfolio-img{
+                width: 100%;
+                height: 50vh;
+            }
+
+            .portfolio-img img {
+                width: 100%;
+            }
+
+        </style>
+
+{% endblock %}

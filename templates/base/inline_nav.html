@@ -1,0 +1,33 @@
+    <header class="" id="home">
+        <div class="main-header">
+            <div class="logo">K.Hristov</div>
+
+            <input type="checkbox" class="menu-btn" id="menu-btn">
+            <label for="menu-btn" class="menu-icon">
+                <span class="menu-icon_line"></span>
+            </label>
+
+            <ul class="nav-links">
+                <li class="nav-link"><a href="{% url 'show index' %}">Home</a></li>
+                <li class="nav-link"><a href="{%  url 'about me' %}">About</a></li>
+                <li class="nav-link"><a href="{%  url 'portfolio' %}">Portfolio</a></li>
+                <li class="nav-link"><a href="{% url 'show index'%}">Price</a></li>
+                <li class="nav-link"><a href="{% url 'show index' %}">Quote</a></li>
+                <li class="nav-link"><a href="{%  url 'contact' %}">Contact</a></li>
+            </ul>
+             <ul class="secondary">
+                <li class="secondary-link"><a href="{% url 'careers' %}">Carreers</a> </li>
+
+                {% if user.is_authenticated %}
+                <li class="secondary-link"><a href="{%  url 'logout' %}">Logout</a></li>
+                    {% else %}
+                    <li class="secondary-link"><a href="{%  url 'login user' %}">Login</a></li>
+                {%  endif %}
+            </ul>
+        </div>
+
+
+    </header>
+
+{%  block inline_nav %}
+{% endblock %}

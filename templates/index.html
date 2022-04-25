@@ -1,0 +1,243 @@
+{% extends 'base/base.html' %}
+
+{% load static %}
+
+{% block main_content %}
+
+    <link rel="stylesheet" href="{%  static 'styles/index_sup.css' %}">
+
+    <div class="main-header">
+        <div class="logo">K.Hristov</div>
+        <input type="checkbox" class="menu-btn" id="menu-btn">
+        <label for="menu-btn" class="menu-icon">
+            <span class="menu-icon_line"></span>
+        </label>
+
+        <ul class="nav-links">
+            <li class="nav-link"><a href="{% url 'about me' %}">About</a></li>
+            <li class="nav-link"><a href="{% url 'portfolio' %}">Portfolio</a></li>
+            <li class="nav-link"><a href={% url 'login user' %}>Price</a></li>
+            <li class="nav-link"><a href="{% url 'login user' %}">Quote</a></li>
+            <li class="nav-link"><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+        <ul class="secondary">
+            <li class="secondary-link"><a href="">Careers</a></li>
+            <li class="secondary-link"><a href="{% url 'login user' %}">Login</a></li>
+
+        </ul>
+    </div>
+
+    <header class="section sec1 header active" id="home">
+
+        <div class="header-content">
+            <div class="left-header">
+                <div class="h-shape"></div>
+                <div class="image">
+                    <img src="{% static 'img/design.png' %}" alt="">
+                </div>
+            </div>
+            <div class="right-header">
+                <h1 class="name">
+                    Welcome to <span>K.Hristov</span> Architecture bureau
+                </h1>
+                <p class="index-details">
+                    <span class="index-detail">Precision</span>
+                    <span class="index-detail">Professionalism</span>
+                    <span class="index-detail">Perfection</span>
+                </p>
+
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="section sec3" id="portfolio">
+
+            <div class="main-title">
+                <h2>My <span>Portfolio</span><span class="bg-text">My Work</span></h2>
+            </div>
+            <p class="port-text">
+                <span class="logo port-text-logo">K. Hristov</span><br>
+                <span>Everything is possible</span>
+            </p>
+            <div class="portfolios">
+                <div class="portfolio-item">
+                    <div class="image">
+                        <img src="{% static 'img/one.jpg' %}" alt="">
+                    </div>
+                    <div class="hover-items">
+                        <h3>Project Source</h3>
+                        <div class="icons">
+                            <a href="{% url 'portfolio' %}" class="icon">
+                                <i class="fas fa-user"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="image">
+                        <img src="{% static 'img/two.jpg' %}" alt="">
+                    </div>
+                    <div class="hover-items">
+                        <h3>Project Source</h3>
+                        <div class="icons">
+                             <a href="{% url 'portfolio' %}" class="icon">
+                                <i class="fas fa-user"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="image">
+                        <img src="{% static 'img/three.jpg' %}" alt="">
+                    </div>
+                    <div class="hover-items">
+                        <h3>Project Source</h3>
+                        <div class="icons">
+                            <a href="{% url 'portfolio' %}" class="icon">
+                                <i class="fas fa-user"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="image">
+                        <img src="{% static 'img/four.jpg' %}" alt="">
+                    </div>
+                    <div class="hover-items">
+                        <h3>Project Source</h3>
+                        <div class="icons">
+                             <a href="{% url 'portfolio' %}" class="icon">
+                                <i class="fas fa-user"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="image">
+                        <img src="{% static 'img/five.jpg' %}" alt="">
+                    </div>
+                    <div class="hover-items">
+                        <h3>Project Source</h3>
+                        <div class="icons">
+                          <a href="{% url 'portfolio' %}" class="icon">
+                                <i class="fas fa-user"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="image">
+                        <img src="{% static 'img/six.jpg' %}" alt="">
+                    </div>
+                    <div class="hover-items">
+                        <h3>Project Source</h3>
+                        <div class="icons">
+                            <a href="{% url 'portfolio' %}" class="icon">
+                                <i class="fas fa-user"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="section sec4 " id="blogs">
+            <div class="blogs-content">
+                <div class="main-title">
+                    <h2>Tutorials <span class="logo port-text-logo">K.Hristov</span><span
+                            class="bg-text">K. Hristov</span></h2>
+                </div>
+                <div class="blogs">
+                    <div class="blog">
+                        <img src="{% static 'img/design1.jpg' %}" alt="">
+                        <div class="blog-text">
+                            <h4>
+                                Lorem ipsum dolor sit amet.
+                            </h4>
+                            <p>
+                                <a href="">Lorem ipsum dolor sit amet consectetur adipisicing.</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="blog">
+                        <img src="{% static 'img/design10.jpg' %}" alt="">
+                        <div class="blog-text">
+                            <h4>
+                                Lorem ipsum dolor sit amet consectetur.
+                            </h4>
+                            <p>
+                                <a href="">Lorem ipsum dolor sit amet consectetur adipisicing.</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="blog">
+                        <img src="{% static 'img/design11.jpg' %}" alt="">
+                        <div class="blog-text">
+                            <h4>
+                                Lorem ipsum dolor sit amet.
+                            </h4>
+                            <p>
+                                <a href="">Lorem ipsum dolor sit amet consectetur adipisicing.</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="blog">
+                        <img src="{% static 'img/design3.jpg' %}" alt="">
+                        <div class="blog-text">
+                            <h4>
+                                Lorem ipsum dolor sit amet.
+                            </h4>
+                            <p>
+                                <a href="">Lorem ipsum dolor sit amet consectetur adipisicing.</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="blog">
+                        <img src="{% static 'img/design7.jpg' %}" alt="">
+                        <div class="blog-text">
+                            <h4>
+                                Lorem ipsum dolor sit amet.
+                            </h4>
+                            <p>
+                                <a href="">Lorem ipsum dolor sit amet consectetur adipisicing.</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="blog">
+                        <img src="{% static 'img/design8.jpg' %}" alt="">
+                        <div class="blog-text">
+                            <h4>
+                                Lorem ipsum dolor sit amet.
+                            </h4>
+                            <p>
+                                <a href="">Lorem ipsum dolor sit amet consectetur adipisicing.</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <div class="controlls">
+        <div class="control  control-1 active-btn" data-id="home">
+            <i class="fas fa-home"></i>
+
+        </div>
+
+        <div class="control control-3" data-id="portfolio">
+            <i class="fas fa-briefcase"></i>
+        </div>
+        <div class="control control-4" data-id="blogs">
+            <i class="far fa-newspaper"></i>
+        </div>
+
+    </div>
+{% endblock %}

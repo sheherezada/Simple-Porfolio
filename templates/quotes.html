@@ -1,0 +1,59 @@
+{% extends 'base/navigation.html' %}
+{% load crispy_forms_filters %}
+{% load static %}
+{% block main_mnavigation %}
+
+
+
+   <main>
+        <section class="section sec5 contact active" id="contact">
+            <div class="contact-container">
+                <div class="main-title">
+                    <h2> <span>Quote</span><span class="bg-text">Quote Request</span></h2>
+                </div>
+                <div class="contact-content-con">
+                    <div class="left-contact">
+                        <h4><span class="logo-contact">K.Hristov</span><br><span>Architecture bureau</span><br></h4>
+                        <p>
+                            <span class="contact-detail">Precision</span>
+                            <span class="contact-detail">Professionalism</span>
+                            <span class="contact-detail">Perfection</span>
+                        </p>
+
+
+                    </div>
+                    <div class="right-contact">
+                        <form method = "POST" class="contact-form" >
+                            <div class="input-control">
+                                {{ form.type }}
+                            </div>
+                            <div class="input-control  col-6">
+                                {{ form.description }}
+                            </div>
+
+                            <div >
+                                <button class="btn-quotes"> SAVE</button>
+                            </div>
+                                {% csrf_token %}
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <style>
+    .btn-quotes {
+        color: var(--color-grey-3);
+        display: flex;
+        justify-content: flex-start;
+        box-shadow: 6px 6px 10px gray;
+        background-color: var(--color-grey-1);
+        padding: 1rem;
+        border-radius: 30px;
+        cursor: progress;
+        border: none;
+
+
+    }
+</style>
+{% endblock %}

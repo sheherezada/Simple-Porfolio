@@ -1,0 +1,17 @@
+.right-contact {
+    background-color: inherit !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.btn-quotes {
+    color: var(--color-grey-3);
+    display: flex;
+    justify-content: flex-start;
+    box-shadow: 6px 6px 10px gray;
+    background-color: var(--color-grey-1);
+    padding: 1rem;
+    border-radius: 30px;
+    cursor: progress;
+    border: none;
+}

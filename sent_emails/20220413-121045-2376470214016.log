@@ -1,0 +1,25 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: Password reset on 127.0.0.1:8000
+From: webmaster@localhost
+To: aleksandrovah@gmail.com
+Date: Wed, 13 Apr 2022 10:10:45 -0000
+Message-ID: <164984464572.29728.9863412469969228103@DESKTOR-SHEHEREZADA>
+
+
+You're receiving this email because you requested a password reset for your user account at 127.0.0.1:8000.
+
+Please go to the following page and choose a new password:
+
+http://127.0.0.1:8000/profile/reset/NQ/b3tj5x-6d0d99b1aee4f30ff7dc11ef51f58863/
+
+Your username, in case you’ve forgotten: sheherezada2
+
+Thanks for using our site!
+
+The 127.0.0.1:8000 team
+
+
+
+-------------------------------------------------------------------------------

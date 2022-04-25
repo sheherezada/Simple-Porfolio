@@ -1,0 +1,20 @@
+.image {
+    margin-top: 2rem !important;
+}
+
+.btn-wrapper {
+    padding-left: 80px;
+    margin-top: 50px;
+}
+
+.cv {
+    text-decoration: underline !important;
+}
+
+.name {
+    font-size: 2.5rem !important;
+}
+
+.name span {
+    font-size: 3.5rem !important;
+}
